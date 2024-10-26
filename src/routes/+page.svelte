@@ -252,9 +252,9 @@
 
 <div
 	class="container mx-auto p-4"
-	on:touchstart={handleTouch}
-	on:touchmove={handleTouch}
-	on:touchend={() => (touchStart = null)}
+	on:touchstart|preventDefault={handleTouch}
+	on:touchmove|preventDefault={handleTouch}
+	on:touchend|preventDefault={() => (touchStart = null)}
 >
 	<div class="text-center mb-4 dark">
 		<h1 class="h1">2048</h1>
